@@ -60,10 +60,25 @@ All commands accept `--db <path>` to use a different database file. Run
 
 ## How it works
 
-```
-audio → mono @ 11 kHz → spectrogram → peaks ("constellation") → peak-pair hashes
-                                                                      │
-                     song + timestamp  ←  offset voting  ←  database lookup
+Songs being indexed and clips being identified go through the same
+fingerprinting pipeline. Only what happens to the hashes at the end differs.
+
+```mermaid
+flowchart TD
+    S["🎼 Song files"] -->|"shazam index"| FP
+    M["🎤 Mic or audio clip"] -->|"shazam listen / match"| FP
+
+    subgraph FP["Fingerprinting: identical for songs and clips"]
+        direction LR
+        A["Mono<br/>11,025 Hz"] --> B["Spectrogram<br/>FFT every 23 ms"] --> C["Peaks<br/>≤ 30 per sec"] --> D["Hashes<br/>(f1, f2, Δt)"]
+    end
+
+    FP -->|"index: store"| DB[("fingerprints.db<br/>hash → song, time")]
+    FP -->|"identify: look up"| V["Offset voting<br/>song time − clip time"]
+    DB --> V
+    V --> R{"≥ 80 aligned and<br/>2.5× runner-up?"}
+    R -->|"yes"| Y["🎵 Song + timestamp"]
+    R -->|"no"| N["Keep listening /<br/>no match"]
 ```
 
 1. **Spectrogram**: a 1024-point FFT every 23 ms.
