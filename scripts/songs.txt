@@ -1,0 +1,62 @@
+# Test tracks by Kevin MacLeod (incompetech.com), licensed CC BY 4.0.
+# <folder>/<file>: library = indexed, holdout = never indexed (false-positive checks).
+library/Deep Noise.mp3
+library/Crinoline Dreams.mp3
+library/Del Rio Bravo.mp3
+library/Junkyard Tribe.mp3
+library/Pixel Peeker Polka - faster.mp3
+library/Bummin on Tremelo.mp3
+library/Gonna Start v2.mp3
+library/Ready Aim Fire.mp3
+library/Artifact.mp3
+library/Breaktime.mp3
+library/Upbeat Forever.mp3
+library/Burnt Spirit.mp3
+library/The Machine Thinks.mp3
+library/Chee Zee Jungle.mp3
+library/Too Cool.mp3
+library/Happy Happy Game Show.mp3
+library/Aquarium.mp3
+library/Brittle Rille.mp3
+library/Disco con Tutti.mp3
+library/Club Diver.mp3
+library/C-Funk.mp3
+library/Adeste Fideles Waltz.mp3
+library/Classic Horror 3.mp3
+library/Lobby Time.mp3
+library/Peppy Pepe.mp3
+library/Finding the Balance.mp3
+library/Pixel Peeker Polka - slower.mp3
+library/Blown Away - No Percussion.mp3
+library/Firmament.mp3
+library/Raw.mp3
+library/Whimsy Groove.mp3
+library/Olde Timey.mp3
+library/Sunday Dub.mp3
+library/Frozen Star.mp3
+library/Drankin Song.mp3
+library/Eastern Thought.mp3
+library/Dirt Rhodes.mp3
+library/Funeral March for Brass.mp3
+library/Montauk Point.mp3
+library/Who Likes to Party.mp3
+library/How it Begins.mp3
+library/Aces High.mp3
+library/Jingle Bells.mp3
+library/Shadowlands 5 - Antechamber.mp3
+library/Local Forecast.mp3
+library/Casa Bossa Nova.mp3
+library/Master Disorder.mp3
+library/Dvorak Polka.mp3
+library/Clear Air.mp3
+library/Dub Feral.mp3
+library/Metalmania.mp3
+library/Kumasi Groove.mp3
+library/Merry Go Slower - Distressed.mp3
+library/Blue Ska.mp3
+holdout/Simplex.mp3
+holdout/Slow Jam.mp3
+holdout/Savannah Sketch.mp3
+holdout/Slow Burn.mp3
+holdout/Cello Suite 1 in G - Prelude.mp3
+holdout/Sad Trio.mp3

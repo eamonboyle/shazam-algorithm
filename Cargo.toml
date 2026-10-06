@@ -1,0 +1,24 @@
+[package]
+name = "shazam"
+version = "0.1.0"
+edition = "2021"
+description = "Shazam-style audio fingerprinting: identify songs from files or the microphone"
+license = "MIT"
+repository = "https://github.com/eamonboyle/shazam-algorithm"
+readme = "README.md"
+keywords = ["audio", "fingerprinting", "shazam", "dsp", "music"]
+categories = ["multimedia::audio", "command-line-utilities"]
+
+[dependencies]
+anyhow = "1"
+bincode = "1.3"
+clap = { version = "4", features = ["derive"] }
+cpal = "0.16"
+rayon = "1"
+rustfft = "6"
+serde = { version = "1", features = ["derive"] }
+symphonia = { version = "0.5", features = ["mp3", "aac", "isomp4"] }
+
+# DSP loops are painfully slow unoptimized, so optimize even debug builds.
+[profile.dev]
+opt-level = 2
